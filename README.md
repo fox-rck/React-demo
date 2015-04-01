@@ -1,2 +1,1 @@
-.) cd into root directory
-.) npm install react
+This is a repo for the React demo project
