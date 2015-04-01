@@ -33,7 +33,9 @@ module.exports = React.createClass({
     		break;
     	}
         return <div>
-	        <div className="header">REACT DEMO</div>
+	        <div className="header">
+	        	<img src="logo.jpg"/>
+	        </div>
 	        <div className="tab-wrapper">
 	        	<button className={t1Class} onClick={this.changeTab.bind(this,1)}>Tab 1</button>
 	        	<button className={t2Class} onClick={this.changeTab.bind(this,2)}>Tab 2</button>

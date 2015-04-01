@@ -91,7 +91,9 @@
 	    		break;
 	    	}
 	        return React.createElement("div", null, 
-		        React.createElement("div", {className: "header"}, "REACT DEMO"), 
+		        React.createElement("div", {className: "header"}, 
+		        	React.createElement("img", {src: "logo.jpg"})
+		        ), 
 		        React.createElement("div", {className: "tab-wrapper"}, 
 		        	React.createElement("button", {className: t1Class, onClick: this.changeTab.bind(this,1)}, "Tab 1"), 
 		        	React.createElement("button", {className: t2Class, onClick: this.changeTab.bind(this,2)}, "Tab 2"), 
@@ -3440,27 +3442,27 @@
 
 	'use strict';
 
-	var DOMProperty = __webpack_require__(75);
-	var ReactBrowserEventEmitter = __webpack_require__(76);
+	var DOMProperty = __webpack_require__(76);
+	var ReactBrowserEventEmitter = __webpack_require__(77);
 	var ReactCurrentOwner = __webpack_require__(9);
 	var ReactElement = __webpack_require__(10);
 	var ReactElementValidator = __webpack_require__(11);
-	var ReactEmptyComponent = __webpack_require__(77);
+	var ReactEmptyComponent = __webpack_require__(78);
 	var ReactInstanceHandles = __webpack_require__(15);
 	var ReactInstanceMap = __webpack_require__(33);
-	var ReactMarkupChecksum = __webpack_require__(78);
+	var ReactMarkupChecksum = __webpack_require__(79);
 	var ReactPerf = __webpack_require__(17);
 	var ReactReconciler = __webpack_require__(19);
 	var ReactUpdateQueue = __webpack_require__(31);
-	var ReactUpdates = __webpack_require__(79);
+	var ReactUpdates = __webpack_require__(80);
 
 	var emptyObject = __webpack_require__(39);
-	var containsNode = __webpack_require__(80);
-	var getReactRootElementInContainer = __webpack_require__(81);
-	var instantiateReactComponent = __webpack_require__(82);
+	var containsNode = __webpack_require__(81);
+	var getReactRootElementInContainer = __webpack_require__(82);
+	var instantiateReactComponent = __webpack_require__(83);
 	var invariant = __webpack_require__(26);
-	var setInnerHTML = __webpack_require__(83);
-	var shouldUpdateReactComponent = __webpack_require__(84);
+	var setInnerHTML = __webpack_require__(84);
+	var shouldUpdateReactComponent = __webpack_require__(85);
 	var warning = __webpack_require__(30);
 
 	var SEPARATOR = ReactInstanceHandles.SEPARATOR;
@@ -4443,7 +4445,7 @@
 	var ReactFragment = __webpack_require__(28);
 	var ReactPropTypeLocationNames = __webpack_require__(36);
 
-	var emptyFunction = __webpack_require__(85);
+	var emptyFunction = __webpack_require__(75);
 
 	/**
 	 * Collection of methods that allow declaration and validation of props that are
@@ -4920,12 +4922,12 @@
 
 	var ReactElement = __webpack_require__(10);
 	var ReactInstanceHandles = __webpack_require__(15);
-	var ReactMarkupChecksum = __webpack_require__(78);
+	var ReactMarkupChecksum = __webpack_require__(79);
 	var ReactServerRenderingTransaction =
 	  __webpack_require__(87);
 
 	var emptyObject = __webpack_require__(39);
-	var instantiateReactComponent = __webpack_require__(82);
+	var instantiateReactComponent = __webpack_require__(83);
 	var invariant = __webpack_require__(26);
 
 	/**
@@ -5915,7 +5917,7 @@
 
 	"use strict";
 
-	var emptyFunction = __webpack_require__(85);
+	var emptyFunction = __webpack_require__(75);
 
 	/**
 	 * Similar to invariant but only logs a warning if the condition is not met.
@@ -5984,7 +5986,7 @@
 	var ReactCurrentOwner = __webpack_require__(9);
 	var ReactElement = __webpack_require__(10);
 	var ReactInstanceMap = __webpack_require__(33);
-	var ReactUpdates = __webpack_require__(79);
+	var ReactUpdates = __webpack_require__(80);
 
 	var assign = __webpack_require__(21);
 	var invariant = __webpack_require__(26);
@@ -6807,7 +6809,7 @@
 
 	'use strict';
 
-	var DOMProperty = __webpack_require__(75);
+	var DOMProperty = __webpack_require__(76);
 
 	var quoteAttributeValueForBrowser = __webpack_require__(89);
 	var warning = __webpack_require__(30);
@@ -7055,9 +7057,9 @@
 	'use strict';
 
 	var CSSPropertyOperations = __webpack_require__(90);
-	var DOMProperty = __webpack_require__(75);
+	var DOMProperty = __webpack_require__(76);
 	var DOMPropertyOperations = __webpack_require__(43);
-	var ReactBrowserEventEmitter = __webpack_require__(76);
+	var ReactBrowserEventEmitter = __webpack_require__(77);
 	var ReactComponentBrowserEnvironment =
 	  __webpack_require__(44);
 	var ReactMount = __webpack_require__(16);
@@ -8106,7 +8108,7 @@
 	var EventPluginHub = __webpack_require__(97);
 	var EventPropagators = __webpack_require__(93);
 	var ExecutionEnvironment = __webpack_require__(24);
-	var ReactUpdates = __webpack_require__(79);
+	var ReactUpdates = __webpack_require__(80);
 	var SyntheticEvent = __webpack_require__(98);
 
 	var isEventSupported = __webpack_require__(92);
@@ -8706,7 +8708,7 @@
 
 	'use strict';
 
-	var DOMProperty = __webpack_require__(75);
+	var DOMProperty = __webpack_require__(76);
 	var ExecutionEnvironment = __webpack_require__(24);
 
 	var MUST_USE_ATTRIBUTE = DOMProperty.injection.MUST_USE_ATTRIBUTE;
@@ -8916,7 +8918,7 @@
 
 	var EventConstants = __webpack_require__(25);
 
-	var emptyFunction = __webpack_require__(85);
+	var emptyFunction = __webpack_require__(75);
 
 	var topLevelTypes = EventConstants.topLevelTypes;
 
@@ -9010,11 +9012,11 @@
 
 	'use strict';
 
-	var ReactUpdates = __webpack_require__(79);
+	var ReactUpdates = __webpack_require__(80);
 	var Transaction = __webpack_require__(101);
 
 	var assign = __webpack_require__(21);
-	var emptyFunction = __webpack_require__(85);
+	var emptyFunction = __webpack_require__(75);
 
 	var RESET_BATCHED_UPDATES = {
 	  initialize: emptyFunction,
@@ -9268,7 +9270,7 @@
 	var ReactPerf = __webpack_require__(17);
 
 	var invariant = __webpack_require__(26);
-	var setInnerHTML = __webpack_require__(83);
+	var setInnerHTML = __webpack_require__(84);
 
 	/**
 	 * Errors for properties that should not be updated with `updatePropertyById()`.
@@ -9484,7 +9486,7 @@
 	var ReactClass = __webpack_require__(7);
 	var ReactElement = __webpack_require__(10);
 	var ReactMount = __webpack_require__(16);
-	var ReactUpdates = __webpack_require__(79);
+	var ReactUpdates = __webpack_require__(80);
 
 	var assign = __webpack_require__(21);
 	var invariant = __webpack_require__(26);
@@ -9715,7 +9717,7 @@
 	var ReactBrowserComponentMixin = __webpack_require__(54);
 	var ReactClass = __webpack_require__(7);
 	var ReactElement = __webpack_require__(10);
-	var ReactUpdates = __webpack_require__(79);
+	var ReactUpdates = __webpack_require__(80);
 
 	var assign = __webpack_require__(21);
 
@@ -9898,7 +9900,7 @@
 	var ReactBrowserComponentMixin = __webpack_require__(54);
 	var ReactClass = __webpack_require__(7);
 	var ReactElement = __webpack_require__(10);
-	var ReactUpdates = __webpack_require__(79);
+	var ReactUpdates = __webpack_require__(80);
 
 	var assign = __webpack_require__(21);
 	var invariant = __webpack_require__(26);
@@ -10040,7 +10042,7 @@
 	var PooledClass = __webpack_require__(27);
 	var ReactInstanceHandles = __webpack_require__(15);
 	var ReactMount = __webpack_require__(16);
-	var ReactUpdates = __webpack_require__(79);
+	var ReactUpdates = __webpack_require__(80);
 
 	var assign = __webpack_require__(21);
 	var getEventTarget = __webpack_require__(107);
@@ -10221,17 +10223,17 @@
 
 	'use strict';
 
-	var DOMProperty = __webpack_require__(75);
+	var DOMProperty = __webpack_require__(76);
 	var EventPluginHub = __webpack_require__(97);
-	var ReactComponentEnvironment = __webpack_require__(109);
+	var ReactComponentEnvironment = __webpack_require__(112);
 	var ReactClass = __webpack_require__(7);
-	var ReactEmptyComponent = __webpack_require__(77);
-	var ReactBrowserEventEmitter = __webpack_require__(76);
+	var ReactEmptyComponent = __webpack_require__(78);
+	var ReactBrowserEventEmitter = __webpack_require__(77);
 	var ReactNativeComponent = __webpack_require__(40);
 	var ReactDOMComponent = __webpack_require__(45);
 	var ReactPerf = __webpack_require__(17);
 	var ReactRootIndex = __webpack_require__(74);
-	var ReactUpdates = __webpack_require__(79);
+	var ReactUpdates = __webpack_require__(80);
 
 	var ReactInjection = {
 	  Component: ReactComponentEnvironment.injection,
@@ -10268,11 +10270,11 @@
 
 	'use strict';
 
-	var CallbackQueue = __webpack_require__(110);
+	var CallbackQueue = __webpack_require__(109);
 	var PooledClass = __webpack_require__(27);
-	var ReactBrowserEventEmitter = __webpack_require__(76);
-	var ReactInputSelection = __webpack_require__(111);
-	var ReactPutListenerQueue = __webpack_require__(112);
+	var ReactBrowserEventEmitter = __webpack_require__(77);
+	var ReactInputSelection = __webpack_require__(110);
+	var ReactPutListenerQueue = __webpack_require__(111);
 	var Transaction = __webpack_require__(101);
 
 	var assign = __webpack_require__(21);
@@ -10449,7 +10451,7 @@
 
 	var EventConstants = __webpack_require__(25);
 	var EventPropagators = __webpack_require__(93);
-	var ReactInputSelection = __webpack_require__(111);
+	var ReactInputSelection = __webpack_require__(110);
 	var SyntheticEvent = __webpack_require__(98);
 
 	var getActiveElement = __webpack_require__(113);
@@ -11113,7 +11115,7 @@
 
 	'use strict';
 
-	var DOMProperty = __webpack_require__(75);
+	var DOMProperty = __webpack_require__(76);
 
 	var MUST_USE_ATTRIBUTE = DOMProperty.injection.MUST_USE_ATTRIBUTE;
 
@@ -11272,7 +11274,7 @@
 
 	'use strict';
 
-	var DOMProperty = __webpack_require__(75);
+	var DOMProperty = __webpack_require__(76);
 	var ReactDefaultPerfAnalysis = __webpack_require__(123);
 	var ReactMount = __webpack_require__(16);
 	var ReactPerf = __webpack_require__(17);
@@ -11561,6 +11563,44 @@
 
 /***/ },
 /* 75 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/** @jsx React.DOM *//**
+	 * Copyright 2013-2015, Facebook, Inc.
+	 * All rights reserved.
+	 *
+	 * This source code is licensed under the BSD-style license found in the
+	 * LICENSE file in the root directory of this source tree. An additional grant
+	 * of patent rights can be found in the PATENTS file in the same directory.
+	 *
+	 * @providesModule emptyFunction
+	 */
+
+	function makeEmptyFunction(arg) {
+	  return function() {
+	    return arg;
+	  };
+	}
+
+	/**
+	 * This function accepts and discards inputs; it has no side effects. This is
+	 * primarily useful idiomatically for overridable function endpoints which
+	 * always need to be callable, since JS lacks a null-call idiom ala Cocoa.
+	 */
+	function emptyFunction() {}
+
+	emptyFunction.thatReturns = makeEmptyFunction;
+	emptyFunction.thatReturnsFalse = makeEmptyFunction(false);
+	emptyFunction.thatReturnsTrue = makeEmptyFunction(true);
+	emptyFunction.thatReturnsNull = makeEmptyFunction(null);
+	emptyFunction.thatReturnsThis = function() { return this; };
+	emptyFunction.thatReturnsArgument = function(arg) { return arg; };
+
+	module.exports = emptyFunction;
+
+
+/***/ },
+/* 76 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/** @jsx React.DOM *//**
@@ -11861,7 +11901,7 @@
 
 
 /***/ },
-/* 76 */
+/* 77 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/** @jsx React.DOM *//**
@@ -12218,7 +12258,7 @@
 
 
 /***/ },
-/* 77 */
+/* 78 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/** @jsx React.DOM *//**
@@ -12315,7 +12355,7 @@
 
 
 /***/ },
-/* 78 */
+/* 79 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/** @jsx React.DOM *//**
@@ -12367,7 +12407,7 @@
 
 
 /***/ },
-/* 79 */
+/* 80 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/** @jsx React.DOM *//**
@@ -12383,7 +12423,7 @@
 
 	'use strict';
 
-	var CallbackQueue = __webpack_require__(110);
+	var CallbackQueue = __webpack_require__(109);
 	var PooledClass = __webpack_require__(27);
 	var ReactCurrentOwner = __webpack_require__(9);
 	var ReactPerf = __webpack_require__(17);
@@ -12651,7 +12691,7 @@
 
 
 /***/ },
-/* 80 */
+/* 81 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/** @jsx React.DOM *//**
@@ -12699,7 +12739,7 @@
 
 
 /***/ },
-/* 81 */
+/* 82 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/** @jsx React.DOM *//**
@@ -12738,7 +12778,7 @@
 
 
 /***/ },
-/* 82 */
+/* 83 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/** @jsx React.DOM *//**
@@ -12756,7 +12796,7 @@
 	'use strict';
 
 	var ReactCompositeComponent = __webpack_require__(130);
-	var ReactEmptyComponent = __webpack_require__(77);
+	var ReactEmptyComponent = __webpack_require__(78);
 	var ReactNativeComponent = __webpack_require__(40);
 
 	var assign = __webpack_require__(21);
@@ -12877,7 +12917,7 @@
 
 
 /***/ },
-/* 83 */
+/* 84 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/** @jsx React.DOM *//**
@@ -12970,7 +13010,7 @@
 
 
 /***/ },
-/* 84 */
+/* 85 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/** @jsx React.DOM *//**
@@ -13076,44 +13116,6 @@
 
 
 /***/ },
-/* 85 */
-/***/ function(module, exports, __webpack_require__) {
-
-	/** @jsx React.DOM *//**
-	 * Copyright 2013-2015, Facebook, Inc.
-	 * All rights reserved.
-	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
-	 *
-	 * @providesModule emptyFunction
-	 */
-
-	function makeEmptyFunction(arg) {
-	  return function() {
-	    return arg;
-	  };
-	}
-
-	/**
-	 * This function accepts and discards inputs; it has no side effects. This is
-	 * primarily useful idiomatically for overridable function endpoints which
-	 * always need to be callable, since JS lacks a null-call idiom ala Cocoa.
-	 */
-	function emptyFunction() {}
-
-	emptyFunction.thatReturns = makeEmptyFunction;
-	emptyFunction.thatReturnsFalse = makeEmptyFunction(false);
-	emptyFunction.thatReturnsTrue = makeEmptyFunction(true);
-	emptyFunction.thatReturnsNull = makeEmptyFunction(null);
-	emptyFunction.thatReturnsThis = function() { return this; };
-	emptyFunction.thatReturnsArgument = function(arg) { return arg; };
-
-	module.exports = emptyFunction;
-
-
-/***/ },
 /* 86 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -13207,12 +13209,12 @@
 	'use strict';
 
 	var PooledClass = __webpack_require__(27);
-	var CallbackQueue = __webpack_require__(110);
-	var ReactPutListenerQueue = __webpack_require__(112);
+	var CallbackQueue = __webpack_require__(109);
+	var ReactPutListenerQueue = __webpack_require__(111);
 	var Transaction = __webpack_require__(101);
 
 	var assign = __webpack_require__(21);
-	var emptyFunction = __webpack_require__(85);
+	var emptyFunction = __webpack_require__(75);
 
 	/**
 	 * Provides a `CallbackQueue` queue for collecting `onDOMReady` callbacks
@@ -13570,7 +13572,7 @@
 
 	'use strict';
 
-	var ReactComponentEnvironment = __webpack_require__(109);
+	var ReactComponentEnvironment = __webpack_require__(112);
 	var ReactMultiChildUpdateTypes = __webpack_require__(137);
 
 	var ReactReconciler = __webpack_require__(19);
@@ -14694,7 +14696,7 @@
 	var PooledClass = __webpack_require__(27);
 
 	var assign = __webpack_require__(21);
-	var emptyFunction = __webpack_require__(85);
+	var emptyFunction = __webpack_require__(75);
 	var getEventTarget = __webpack_require__(107);
 
 	/**
@@ -15266,7 +15268,7 @@
 
 	'use strict';
 
-	var ReactBrowserEventEmitter = __webpack_require__(76);
+	var ReactBrowserEventEmitter = __webpack_require__(77);
 
 	var accumulateInto = __webpack_require__(139);
 	var forEachAccumulated = __webpack_require__(140);
@@ -15629,7 +15631,7 @@
 	 * @typechecks
 	 */
 
-	var emptyFunction = __webpack_require__(85);
+	var emptyFunction = __webpack_require__(75);
 
 	/**
 	 * Upstream version of event listener. Does not take into account specific
@@ -15782,69 +15784,6 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	/** @jsx React.DOM *//**
-	 * Copyright 2014-2015, Facebook, Inc.
-	 * All rights reserved.
-	 *
-	 * This source code is licensed under the BSD-style license found in the
-	 * LICENSE file in the root directory of this source tree. An additional grant
-	 * of patent rights can be found in the PATENTS file in the same directory.
-	 *
-	 * @providesModule ReactComponentEnvironment
-	 */
-
-	'use strict';
-
-	var invariant = __webpack_require__(26);
-
-	var injected = false;
-
-	var ReactComponentEnvironment = {
-
-	  /**
-	   * Optionally injectable environment dependent cleanup hook. (server vs.
-	   * browser etc). Example: A browser system caches DOM nodes based on component
-	   * ID and must remove that cache entry when this instance is unmounted.
-	   */
-	  unmountIDFromEnvironment: null,
-
-	  /**
-	   * Optionally injectable hook for swapping out mount images in the middle of
-	   * the tree.
-	   */
-	  replaceNodeWithMarkupByID: null,
-
-	  /**
-	   * Optionally injectable hook for processing a queue of child updates. Will
-	   * later move into MultiChildComponents.
-	   */
-	  processChildrenUpdates: null,
-
-	  injection: {
-	    injectEnvironment: function(environment) {
-	      (true ? invariant(
-	        !injected,
-	        'ReactCompositeComponent: injectEnvironment() can only be called once.'
-	      ) : invariant(!injected));
-	      ReactComponentEnvironment.unmountIDFromEnvironment =
-	        environment.unmountIDFromEnvironment;
-	      ReactComponentEnvironment.replaceNodeWithMarkupByID =
-	        environment.replaceNodeWithMarkupByID;
-	      ReactComponentEnvironment.processChildrenUpdates =
-	        environment.processChildrenUpdates;
-	      injected = true;
-	    }
-	  }
-
-	};
-
-	module.exports = ReactComponentEnvironment;
-
-
-/***/ },
-/* 110 */
-/***/ function(module, exports, __webpack_require__) {
-
-	/** @jsx React.DOM *//**
 	 * Copyright 2013-2015, Facebook, Inc.
 	 * All rights reserved.
 	 *
@@ -15943,7 +15882,7 @@
 
 
 /***/ },
-/* 111 */
+/* 110 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/** @jsx React.DOM *//**
@@ -15961,7 +15900,7 @@
 
 	var ReactDOMSelection = __webpack_require__(146);
 
-	var containsNode = __webpack_require__(80);
+	var containsNode = __webpack_require__(81);
 	var focusNode = __webpack_require__(143);
 	var getActiveElement = __webpack_require__(113);
 
@@ -16082,7 +16021,7 @@
 
 
 /***/ },
-/* 112 */
+/* 111 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/** @jsx React.DOM *//**
@@ -16099,7 +16038,7 @@
 	'use strict';
 
 	var PooledClass = __webpack_require__(27);
-	var ReactBrowserEventEmitter = __webpack_require__(76);
+	var ReactBrowserEventEmitter = __webpack_require__(77);
 
 	var assign = __webpack_require__(21);
 
@@ -16139,6 +16078,69 @@
 	PooledClass.addPoolingTo(ReactPutListenerQueue);
 
 	module.exports = ReactPutListenerQueue;
+
+
+/***/ },
+/* 112 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/** @jsx React.DOM *//**
+	 * Copyright 2014-2015, Facebook, Inc.
+	 * All rights reserved.
+	 *
+	 * This source code is licensed under the BSD-style license found in the
+	 * LICENSE file in the root directory of this source tree. An additional grant
+	 * of patent rights can be found in the PATENTS file in the same directory.
+	 *
+	 * @providesModule ReactComponentEnvironment
+	 */
+
+	'use strict';
+
+	var invariant = __webpack_require__(26);
+
+	var injected = false;
+
+	var ReactComponentEnvironment = {
+
+	  /**
+	   * Optionally injectable environment dependent cleanup hook. (server vs.
+	   * browser etc). Example: A browser system caches DOM nodes based on component
+	   * ID and must remove that cache entry when this instance is unmounted.
+	   */
+	  unmountIDFromEnvironment: null,
+
+	  /**
+	   * Optionally injectable hook for swapping out mount images in the middle of
+	   * the tree.
+	   */
+	  replaceNodeWithMarkupByID: null,
+
+	  /**
+	   * Optionally injectable hook for processing a queue of child updates. Will
+	   * later move into MultiChildComponents.
+	   */
+	  processChildrenUpdates: null,
+
+	  injection: {
+	    injectEnvironment: function(environment) {
+	      (true ? invariant(
+	        !injected,
+	        'ReactCompositeComponent: injectEnvironment() can only be called once.'
+	      ) : invariant(!injected));
+	      ReactComponentEnvironment.unmountIDFromEnvironment =
+	        environment.unmountIDFromEnvironment;
+	      ReactComponentEnvironment.replaceNodeWithMarkupByID =
+	        environment.replaceNodeWithMarkupByID;
+	      ReactComponentEnvironment.processChildrenUpdates =
+	        environment.processChildrenUpdates;
+	      injected = true;
+	    }
+	  }
+
+	};
+
+	module.exports = ReactComponentEnvironment;
 
 
 /***/ },
@@ -17382,7 +17384,7 @@
 
 	'use strict';
 
-	var ReactComponentEnvironment = __webpack_require__(109);
+	var ReactComponentEnvironment = __webpack_require__(112);
 	var ReactContext = __webpack_require__(8);
 	var ReactCurrentOwner = __webpack_require__(9);
 	var ReactElement = __webpack_require__(10);
@@ -17394,12 +17396,12 @@
 	var ReactPropTypeLocations = __webpack_require__(35);
 	var ReactPropTypeLocationNames = __webpack_require__(36);
 	var ReactReconciler = __webpack_require__(19);
-	var ReactUpdates = __webpack_require__(79);
+	var ReactUpdates = __webpack_require__(80);
 
 	var assign = __webpack_require__(21);
 	var emptyObject = __webpack_require__(39);
 	var invariant = __webpack_require__(26);
-	var shouldUpdateReactComponent = __webpack_require__(84);
+	var shouldUpdateReactComponent = __webpack_require__(85);
 	var warning = __webpack_require__(30);
 
 	function getDeclarationErrorAddendum(component) {
@@ -18744,8 +18746,8 @@
 	var ReactReconciler = __webpack_require__(19);
 
 	var flattenChildren = __webpack_require__(151);
-	var instantiateReactComponent = __webpack_require__(82);
-	var shouldUpdateReactComponent = __webpack_require__(84);
+	var instantiateReactComponent = __webpack_require__(83);
+	var shouldUpdateReactComponent = __webpack_require__(85);
 
 	/**
 	 * ReactChildReconciler provides helpers for initializing or updating a set of
@@ -19105,7 +19107,7 @@
 	var ExecutionEnvironment = __webpack_require__(24);
 
 	var createNodesFromMarkup = __webpack_require__(152);
-	var emptyFunction = __webpack_require__(85);
+	var emptyFunction = __webpack_require__(75);
 	var getMarkupWrap = __webpack_require__(153);
 	var invariant = __webpack_require__(26);
 
@@ -19290,7 +19292,7 @@
 
 	var ExecutionEnvironment = __webpack_require__(24);
 	var escapeTextContentForBrowser = __webpack_require__(46);
-	var setInnerHTML = __webpack_require__(83);
+	var setInnerHTML = __webpack_require__(84);
 
 	/**
 	 * Set the textContent property of a node, ensuring that whitespace is preserved
