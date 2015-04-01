@@ -2,6 +2,7 @@
 
 'use strict'
 var React = require('react')
+var ContactForm = require('../contact_form/ContactForm')
 
 module.exports = React.createClass({
 	getInitialState: function() {
@@ -14,6 +15,7 @@ module.exports = React.createClass({
 	}
     , render: function(){
     	var tab = this.state.selectedTab;
+        var cont = "";
     	var t1Class = ""
     	, t2Class = ""
     	, t3Class = ""
@@ -21,6 +23,7 @@ module.exports = React.createClass({
     	switch (tab) {
     		case 1:
     			t1Class = "selected"
+                cont = <ContactForm />;
     		break;
     		case 2:
     			t2Class = "selected"
@@ -42,7 +45,9 @@ module.exports = React.createClass({
 	        	<button className={t3Class} onClick={this.changeTab.bind(this,3)}>Tab 3</button>
 	        	<button className={t4Class} onClick={this.changeTab.bind(this,4)}>Tab 4</button>
 	        </div>
-	        <div className="container">Content {tab}</div>
+	        <div className="container">
+            {cont}
+            </div>
         </div>
     }
 })

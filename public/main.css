@@ -1,1 +1,1 @@
-body{color:red}
+*{margin:0;padding:0;box-sizing:border-box}.header{height:50px;padding:5px;background:#000;color:#fff}.tab-wrapper button{width:25%;height:30px;background:#ccc}.tab-wrapper button.selected{background:#999}
