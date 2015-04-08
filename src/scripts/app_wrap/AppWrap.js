@@ -3,6 +3,7 @@
 'use strict'
 var React = require('react')
 var ContactForm = require('../contact_form/ContactForm')
+var TestWorld = require('../test_world/TestWorld')
 
 module.exports = React.createClass({
 	getInitialState: function() {
@@ -33,6 +34,7 @@ module.exports = React.createClass({
     		break;
     		case 4:
     			t4Class = "selected"
+    			cont = <TestWorld />;
     		break;
     	}
         return <div>
