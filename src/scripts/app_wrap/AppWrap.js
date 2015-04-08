@@ -7,7 +7,7 @@ var ContactForm = require('../contact_form/ContactForm')
 module.exports = React.createClass({
 	getInitialState: function() {
 		return {
-			selectedTab:1
+			selectedTab : 1
 		}
 	}
 	, changeTab: function(id) {
@@ -46,7 +46,7 @@ module.exports = React.createClass({
 	        	<button className={t4Class} onClick={this.changeTab.bind(this,4)}>Tab 4</button>
 	        </div>
 	        <div className="container">
-            {cont}
+                {cont}
             </div>
         </div>
     }
