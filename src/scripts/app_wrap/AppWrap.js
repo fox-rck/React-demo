@@ -1,8 +1,10 @@
 /** @jsx React.DOM */
 
 'use strict'
-var React = require('react')
-var ContactForm = require('../contact_form/ContactForm')
+var React = require('react');
+var ContactForm = require('../contact_form/ContactForm');
+var ProsCons = require('../pros_cons/ProsCons');
+
 
 module.exports = React.createClass({
 	getInitialState: function() {
@@ -27,6 +29,7 @@ module.exports = React.createClass({
     		break;
     		case 2:
     			t2Class = "selected"
+                cont = <ProsCons />;
     		break;
     		case 3:
     			t3Class = "selected"
