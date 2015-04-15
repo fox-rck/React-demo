@@ -3,6 +3,7 @@
 'use strict'
 var React = require('react')
 var ContactForm = require('../contact_form/ContactForm')
+var OutlookInput = require('../pill_typeahead/OutlookInput');
 
 module.exports = React.createClass({
 	getInitialState: function() {
@@ -27,6 +28,7 @@ module.exports = React.createClass({
     		break;
     		case 2:
     			t2Class = "selected"
+			    cont = <OutlookInput />;
     		break;
     		case 3:
     			t3Class = "selected"
