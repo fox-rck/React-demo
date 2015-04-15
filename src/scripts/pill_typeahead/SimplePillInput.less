@@ -1,0 +1,88 @@
+.pill-input {
+	border: 1px solid #000;
+	clear: both;
+	color: #080808;
+	cursor: text;
+	font-family: Arial;
+	font-size: 16px;
+	line-height: 16px;
+	overflow-x: hidden;
+	overflow-y: auto;
+	padding: 2px;
+
+	&:focus {
+		outline: none;
+	}
+
+	* {
+		display: inline-block;
+		font-family: Arial;
+		font-size: 16px;
+		line-height: 16px;
+		vertical-align: middle;
+	}
+
+	input {//outline: 1px dotted rgba(0, 0, 0, 0.1);
+		border: none;
+		box-shadow: none;
+		height: 22px;
+		padding: 3px 2px;
+		vertical-align: middle;
+
+		&:focus {
+			outline: none;
+		}
+	}
+
+	.pill {//outline: 1px dotted rgba(0, 0, 0, 0.1);
+		background-color: #d5deed;
+		border: 1px solid #9eb7e2;
+		border-radius: 12px;
+		cursor: default;
+		height: 22px;
+		margin: 0 0 0 2px;
+		padding: 1px 5px 1px 15px;
+		text-align: center;
+
+		&:first-child {
+			margin: 0;
+		}
+
+		&:hover {
+			background-color: #b4c5e7;
+			border-color: #6a91d7;
+
+			i {
+				visibility: visible;
+			}
+		}
+
+		&:active, &:focus {
+			background-color: #3872ce;
+			border-color: #3872ce;
+			color: #f4f4f4;
+		}
+
+		.label {
+			vertical-align: text-top;
+		}
+
+		a {
+			color: #3872ce;
+			margin-left: 2px;
+			text-decoration: none;
+			vertical-align: text-top;
+			width: 10px;
+
+			&:hover, &:active, &:visited {
+				color: #3872ce;
+				text-decoration: none;
+			}
+		}
+
+		i {
+			font-style: normal;
+			visibility: hidden;
+		}
+	}
+}
