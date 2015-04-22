@@ -190,7 +190,6 @@
 	                ]
 	                , cons: [
 	                      {title: "The learning curve can be steep", description: "React will slow you down tremendously at the start. Understanding how props, state, and component communication works is not straightforward, and the docs are a maze of information.", is_opened: false}
-	                  ,   {title: "Browser Support", description: "React does not support any browser below IE8, and never will.", is_opened: false}
 	                  ,   {title: "It's not a full framework", description: "There's no router nor model management libraries built into reactJS -- unlike angular.", is_opened: false}
 	                ]
 	            }
