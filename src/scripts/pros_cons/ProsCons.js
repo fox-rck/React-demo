@@ -9,16 +9,12 @@ module.exports = React.createClass({
                 pros: [
                       {title: "React isn't an MVC framework", description: "React is a library for building composable user interfaces. It encourages the creation of reusable UI components which present data that changes over time.", is_opened: false}
                   ,   {title: "React doesn't use templates", description: "React approaches building user interfaces differently by breaking them into components.", is_opened: false}
-                  ,   {title: "Reactive updates are dead simple", description: "When your component is first initialized, the render method is called, generating a lightweight representation of your view.", is_opened: false}
-                  ,   {title: "High performance rendering", description: 'Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.', is_opened: false}
-                  ,   {title: "High performance rendering", description: 'Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.', is_opened: false}
+                  ,   {title: "Ease of debugging", description: "There's a reactJS chrome extension that allows you to inspect the DOM to figure out which component is rendering a particular piece of UI.", is_opened: false}
                 ]
                 , cons: [
                       {title: "The learning curve can be steep", description: "React will slow you down tremendously at the start. Understanding how props, state, and component communication works is not straightforward, and the docs are a maze of information.", is_opened: false}
-                  ,   {title: "Browser Support", description: "React does not support any browser below IE8, and never will", is_opened: false}
-                  ,   {title: "ABC ISSUES", description: 'Some issues', is_opened: false}
-                  ,   {title: "ABC ISSUES", description: 'Some issues', is_opened: false}
-                  ,   {title: "ABC ISSUES", description: 'Some issues', is_opened: false}
+                  ,   {title: "Browser Support", description: "React does not support any browser below IE8, and never will.", is_opened: false}
+                  ,   {title: "It's not a full framework", description: "There's no router nor model management libraries built into reactJS -- unlike angular.", is_opened: false}
                 ]
             }
         };
@@ -39,15 +35,16 @@ module.exports = React.createClass({
     // Loop through data object
     render: function() {
       return (
-        <div class="pros-cons-wrapper">
+        <div className="pros-cons-wrapper">
+          <h2> ReactJS Pros/Cons </h2>
           <h3>Pros</h3>
           <ul>
               {this.state.data.pros.map((item ,idx)=>
                 <li>
-                  <h3>
+                  <h4>
                     {item.title}
                     <a onClick={this.seeMore.bind(this, 0, idx)}>{ !item.is_opened ? ' see more' : ' see less' }</a>
-                  </h3>
+                  </h4>
                   <span>{item.is_opened ? item.description : ""}</span>
                 </li>
               )}
@@ -57,10 +54,10 @@ module.exports = React.createClass({
           <ul>
               {this.state.data.cons.map((item ,idx)=>
                 <li>
-                  <h3>
+                  <h4>
                     {item.title}
                     <a onClick={this.seeMore.bind(this, 1, idx)}>{ !item.is_opened ? ' see more' : ' see less' }</a>
-                  </h3>
+                  </h4>
                   <span>{item.is_opened ? item.description : ""}</span>
                 </li>
               )}
