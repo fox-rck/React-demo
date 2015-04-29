@@ -11,14 +11,6 @@ app.use(bodyParser.json());
 app.use(serveStatic('./build', {'index': ['index.html', 'index.htm']}));
 app.use(serveStatic('./public', {'index': null}));
 
-// app.post('/api/authenticate', function (req, res) {
-//   console.log(req.body)
-//   var pass = req.body.pass;
-//   var ret = ""
-//   if(pass == "Fox") {
-//     ret = req.body
-//   } 
-//     res.send(ret)
-// });
-
-app.listen(3000);
+app.listen(3000, function(){
+	console.log("Express server listening at http://127.0.0.1:3000");
+});
