@@ -7,13 +7,15 @@
     "type": "git",
     "url": "https://github.com/fox-rck/React-demo.git"
   },
-	"scripts": {
-		"test": "jest"
-	},
-	"jest": {
-		"scriptPreprocessor": "preprocessor.js",
-		"unmockedModulePathPatterns": ["node_modules/react"]
-	},
+  "scripts": {
+    "test": "jest"
+  },
+  "jest": {
+    "scriptPreprocessor": "preprocessor.js",
+    "unmockedModulePathPatterns": [
+      "node_modules/react"
+    ]
+  },
   "devDependencies": {
     "body-parser": "*",
     "express": "*",
@@ -26,5 +28,8 @@
     "react-tools": "*",
     "serve-static": "*",
     "webpack": "*"
+  },
+  "dependencies": {
+    "react-router": "^0.13.3"
   }
 }

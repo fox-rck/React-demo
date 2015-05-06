@@ -1,9 +1,10 @@
 /** @jsx React.DOM */
 
 'use strict'
-var React = require('react')
-var ContactForm = require('../contact_form/ContactForm')
-var TestWorld = require('../test_world/TestWorld')
+var React = require('react');
+var Router = require('react-router'); // or var Router = ReactRouter; in browsers
+var RouteHandler = Router.RouteHandler;
+var Link = Router.Link;
 
 module.exports = React.createClass({
 	getInitialState: function() {
@@ -15,40 +16,19 @@ module.exports = React.createClass({
 		this.setState({selectedTab: id});
 	}
     , render: function(){
-    	var tab = this.state.selectedTab;
-        var cont = "";
-    	var t1Class = ""
-    	, t2Class = ""
-    	, t3Class = ""
-    	, t4Class = "";
-    	switch (tab) {
-    		case 1:
-    			t1Class = "selected"
-                cont = <ContactForm />;
-    		break;
-    		case 2:
-    			t2Class = "selected"
-    		break;
-    		case 3:
-    			t3Class = "selected"
-    		break;
-    		case 4:
-    			t4Class = "selected"
-    			cont = <TestWorld />;
-    		break;
-    	}
         return <div>
 	        <div className="header">
 	        	<img src="logo.jpg"/>
 	        </div>
 	        <div className="tab-wrapper">
-	        	<button className={t1Class} onClick={this.changeTab.bind(this,1)}>Tab 1</button>
-	        	<button className={t2Class} onClick={this.changeTab.bind(this,2)}>Tab 2</button>
-	        	<button className={t3Class} onClick={this.changeTab.bind(this,3)}>Tab 3</button>
-	        	<button className={t4Class} onClick={this.changeTab.bind(this,4)}>Tab 4</button>
+                <Link className="btn" to="contact" >Contact</Link>
+                <Link className="btn" to="proscons" >Pros and Cons</Link>
+                <Link className="btn" to="pills" >Pills</Link>
+                <Link className="btn" to="test" >Tests</Link>
+                <div className="clear" />
 	        </div>
 	        <div className="container">
-                {cont}
+               <RouteHandler {...this.props} />
             </div>
         </div>
     }
