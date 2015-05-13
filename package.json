@@ -1,0 +1,35 @@
+{
+  "name": "React-demo",
+  "version": "1.0.0",
+  "description": "Sears React learning project",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fox-rck/React-demo.git"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "jest": {
+    "scriptPreprocessor": "preprocessor.js",
+    "unmockedModulePathPatterns": [
+      "node_modules/react"
+    ]
+  },
+  "devDependencies": {
+    "body-parser": "*",
+    "express": "*",
+    "flux": "*",
+    "jest": "*",
+    "jest-cli": "^0.4.0",
+    "jsx-loader": "*",
+    "nodejs": "*",
+    "react": "*",
+    "react-tools": "*",
+    "serve-static": "*",
+    "webpack": "*"
+  },
+  "dependencies": {
+    "react-router": "^0.13.3"
+  }
+}

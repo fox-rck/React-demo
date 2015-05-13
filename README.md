@@ -11,6 +11,6 @@ node watch.js less public
 
 Run webpack package manager
 
-sudo npm webpack -g
+sudo npm install webpack -g
 
 webpack -b -w

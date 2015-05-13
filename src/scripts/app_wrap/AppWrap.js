@@ -23,8 +23,8 @@ module.exports = React.createClass({
 	        <div className="tab-wrapper">
                 <Link className="btn" to="contact" >Contact</Link>
                 <Link className="btn" to="proscons" >Pros and Cons</Link>
-                <Link className="btn" to="proscons" >Pills</Link>
-                <Link className="btn" to="proscons" >Tests</Link>
+                <Link className="btn" to="pills" >Pills</Link>
+                <Link className="btn" to="test" >Tests</Link>
                 <div className="clear" />
 	        </div>
 	        <div className="container">

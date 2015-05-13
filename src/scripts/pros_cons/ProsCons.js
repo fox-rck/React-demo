@@ -7,8 +7,8 @@ module.exports = React.createClass({
       return { 
             data: {
                 pros: [
-                      {title: "React isn't an MVC framework", description: "React is a library for building composable user interfaces. It encourages the creation of reusable UI components which present data that changes over time.", is_opened: false}
-                  ,   {title: "React doesn't use templates", description: "React approaches building user interfaces differently by breaking them into components.", is_opened: false}
+                      {title: "Components", description: "React is a library for building composable user interfaces. This means that we can build reusable components that would allow us to share code.", is_opened: false}
+                  ,   {title: "Virtual DOM", description: "This is probably why most developers are so attracted to React. React manages its own DOM in memory. The most expensive operation most web apps suffer is mutating the DOM. React's approach is to maintain a virtual representation of the DOM which allows it to calculate differences in the DOM so that it only mutates the part of the DOM that actually needs to be updated. This is a huge benefit!", is_opened: false}
                   ,   {title: "Ease of debugging", description: "There's a reactJS chrome extension that allows you to inspect the DOM to figure out which component is rendering a particular piece of UI.", is_opened: false}
                 ]
                 , cons: [
