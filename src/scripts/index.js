@@ -12,10 +12,9 @@ var Route = Router.Route;
 var routes = (
   <Route name="app" path="/" handler={App}>
   	<Route name="contact" path="/contact" handler={require('./contact_form/ContactForm')}/>
-  	<Route name="proscons" path="/pros-cons" handler={require('./test_world/TestWorld')}/>
+    <Route name="proscons" path="/pro-cons" handler={require('./pros_cons/ProsCons')} />
   	<Route name="pills" path="/pills" handler={require('./test_world/TestWorld')}/>
   	<Route name="test" path="/test" handler={require('./test_world/TestWorld')}/>
-
     <DefaultRoute handler={require('./contact_form/ContactForm')} />
   </Route>
 );
