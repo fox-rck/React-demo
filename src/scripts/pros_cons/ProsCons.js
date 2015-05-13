@@ -29,38 +29,33 @@ module.exports = React.createClass({
         // Set the data state back to update data
         this.setState({ data: data });
     },
-
+    getSection: function(setIdx) {
+      var key = Object.keys(this.state.data)[setIdx];
+      var set = this.state.data[key];
+      return <div>
+                <h3>{key}</h3>
+                  <ul>
+                      {set.map((item ,idx)=>
+                        <li>
+                          <h4>
+                            {item.title}
+                            <a onClick={this.seeMore.bind(this, setIdx, idx)}>{ !item.is_opened ? ' see more' : ' see less' }</a>
+                          </h4>
+                          <span>{item.is_opened ? item.description : ""}</span>
+                        </li>
+                      )}
+                  </ul>
+              </div>
+    }
     // Render html
     // Loop through data object
-    render: function() {
+    ,render: function() {
       return (
         <div className="pros-cons-wrapper">
-          <h2> ReactJS Pros/Cons </h2>
-          <h3>Pros</h3>
-          <ul>
-              {this.state.data.pros.map((item ,idx)=>
-                <li>
-                  <h4>
-                    {item.title}
-                    <a onClick={this.seeMore.bind(this, 0, idx)}>{ !item.is_opened ? ' see more' : ' see less' }</a>
-                  </h4>
-                  <span>{item.is_opened ? item.description : ""}</span>
-                </li>
-              )}
-          </ul>
-          <hr/>
-          <h3>Cons</h3>
-          <ul>
-              {this.state.data.cons.map((item ,idx)=>
-                <li>
-                  <h4>
-                    {item.title}
-                    <a onClick={this.seeMore.bind(this, 1, idx)}>{ !item.is_opened ? ' see more' : ' see less' }</a>
-                  </h4>
-                  <span>{item.is_opened ? item.description : ""}</span>
-                </li>
-              )}
-          </ul>
+          <h2>ReactJS Pros/Cons</h2>
+          {[0,1].map((x)=>
+            <span>{this.getSection(x)}</span>
+          )}
         </div>
       );
     }
