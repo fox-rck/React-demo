@@ -14,7 +14,7 @@ var routes = (
   	<Route name="contact" path="/contact" handler={require('./contact_form/ContactForm')}/>
     <Route name="proscons" path="/pro-cons" handler={require('./pros_cons/ProsCons')} />
   	<Route name="pills" path="/pills" handler={require('./test_world/TestWorld')}/>
-  	<Route name="test" path="/test" handler={require('./test_world/TestWorld')}/>
+  	<Route name="test" path="/test" handler={require('./test_world/Keypad')}/>
     <DefaultRoute handler={require('./contact_form/ContactForm')} />
   </Route>
 );
